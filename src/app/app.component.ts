@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { appVersion, Version } from './version';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
+  public version: Version;
   title = 'app';
+  constructor() {
+    this.version = appVersion;
+  }
 }
