@@ -25,7 +25,8 @@ before_script:
 script:
   - ng test --watch false
   - ng e2e
-  - ng build --prod
+  - ng build --prod --aot
+  - npm run precache
 
 after_success:
   - firebase deploy --token $FIREBASE_TOKEN
