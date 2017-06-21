@@ -1,6 +1,6 @@
 {
     "name": "Generic viewer",
-    "short_name": "Generic viewer",
+    "short_name": "GenViewer",
     "icons": [
         {
             "src": "assets/icons/android-chrome-192x192.png",
