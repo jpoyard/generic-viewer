@@ -21,17 +21,18 @@
 
 <body>
 
-  <app-root></app-root>
+  <app-root>
+    <div class="app-loader" id="content">
+      <img class="logo" src="assets/images/logo.svg" alt="Logo">
 
-  <div class="app-loader" id="content">
-    <img class="logo" src="assets/images/logo.svg" alt="Logo">
+      <noscript>
+        <h4 style="font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica;">
+          Sorry, JavaScript needs to be enabled in order to run this application.
+        </h4>
+      </noscript>
+    </div>
+  </app-root>
 
-    <noscript>
-      <h4 style="font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica;">
-        Sorry, JavaScript needs to be enabled in order to run this application.
-      </h4>
-    </noscript>
-  </div>
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
