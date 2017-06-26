@@ -6,6 +6,6 @@ export class GenericViewerPage {
   }
 
   getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+    return element(by.css('gv-root h1')).getText();
   }
 }

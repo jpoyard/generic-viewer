@@ -1,4 +1,6 @@
 # GenericViewer
+[![GitHub version](https://badge.fury.io/gh/jpoyard%2Fgeneric-viewer.svg)](https://badge.fury.io/gh/jpoyard%2Fgeneric-viewer)
+[![Build Status](https://api.travis-ci.org/jpoyard/generic-viewer.svg?branch=master)](https://api.travis-ci.org/jpoyard/generic-viewer)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.
 
