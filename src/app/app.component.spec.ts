@@ -35,4 +35,17 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('Welcome to Generic viewer !!');
   }));
+
+  it('should render link in an ul tag', async(() => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const expected = ['Tour of Heroes', 'CLI Documentation', 'Angular blog'];
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    const ulElement = compiled.querySelector('ul');
+    const liElements =  ulElement.querySelectorAll('li');
+    liElements.forEach((element, index) => {
+      expect(element.textContent).toContain(expected[index]);
+    });
+
+  }));
 });
