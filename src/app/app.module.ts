@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 import { HomeComponent } from './home/home.component';
 
+import { SharedModule } from './shared/shared.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,8 @@ import { HomeComponent } from './home/home.component';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    SharedModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CounterService } from 'app/shared/counter.service';
 
 @Component({
   selector: 'gv-lazy',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LazyComponent implements OnInit {
 
-  constructor() { }
+  constructor(public counterService: CounterService) { }
 
   ngOnInit() {
   }
