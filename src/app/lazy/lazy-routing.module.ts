@@ -6,11 +6,11 @@ import { LazyPageComponent } from './lazy-page/lazy-page.component';
 const routes: Routes = [
   {
     path: '',
-    component: LazyComponent,
+    component: LazyPageComponent,
     children: [
       {
-        path: 'lazypage',
-        component: LazyPageComponent
+        path: 'counter',
+        component: LazyComponent
       }
     ]
   }
