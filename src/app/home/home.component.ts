@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CounterService } from 'app/shared/counter.service';
+import { AuthService } from 'app/shared/auth.service';
 
 @Component({
   selector: 'gv-home',
@@ -8,7 +9,10 @@ import { CounterService } from 'app/shared/counter.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public counterService: CounterService) { }
+  constructor(
+    public counterService: CounterService,
+    public authService: AuthService
+  ) { }
 
   ngOnInit() {
   }

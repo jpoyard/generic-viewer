@@ -1,25 +1,24 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { LazyPageComponent } from './lazy-page.component';
 
 describe('LazyPageComponent', () => {
-  let component: LazyPageComponent;
-  let fixture: ComponentFixture<LazyPageComponent>;
-
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LazyPageComponent ]
+      imports: [
+        RouterTestingModule
+      ],
+      declarations: [
+        LazyPageComponent
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(LazyPageComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should be created', () => {
+  it('should be created', async(() => {
+    const fixture = TestBed.createComponent(LazyPageComponent);
+    const component = fixture.debugElement.componentInstance;
     expect(component).toBeTruthy();
-  });
+  }));
 });
