@@ -24,7 +24,6 @@ before_script:
 
 script:
   - ng test --watch false
-  - ng e2e
   - ng build --prod --aot
   - npm run precache
 

@@ -2,18 +2,22 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class CounterService {
-  public counter: number;
+  public _counter: number;
 
   constructor() {
-    this.counter = 0;
+    this._counter = 0;
   }
 
   decrease() {
-    this.counter -= 1;
+    this._counter -= 1;
   }
 
   increase() {
-    this.counter += 1;
+    this._counter += 1;
+  }
+
+  get counter(): number {
+    return this._counter;
   }
 
 }
