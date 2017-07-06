@@ -1,7 +1,4 @@
-@import 'styles/variables';
 
 // Fonts
-@import '../node_modules/font-awesome/scss/font-awesome';
-
-// Theming
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+$fa-font-path: "~font-awesome/fonts";
+@import '~font-awesome/scss/font-awesome';

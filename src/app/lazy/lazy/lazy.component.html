@@ -1,6 +1,12 @@
-<p>
-  lazy works!
-</p>
-<button md-raised-button (click)="counterService.decrease()">Decrease Counter</button>
-<button md-raised-button (click)="counterService.increase()">Increase Counter</button>
-<p>Counter: {{ counterService.counter }}</p>
+<md-card class="auth-card">
+  <md-card-header>
+    <md-card-title>Compteur</md-card-title>
+  </md-card-header>
+  <md-card-content>
+    <p>Counter: {{ counterService.counter }}</p>
+  </md-card-content>
+  <md-card-actions>
+    <button md-raised-button (click)="counterService.decrease()">Decrease Counter</button>
+    <button md-raised-button (click)="counterService.increase()">Increase Counter</button>
+  </md-card-actions>
+</md-card>

@@ -1,8 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { AngularFireModule } from 'angularfire2';
-import { MaterialModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
+
+import { MaterialModule, MdSelectModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
+
+import { AngularFireModule } from 'angularfire2';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,9 +23,12 @@ import { SharedModule } from './shared/shared.module';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     MaterialModule,
+    MdSelectModule,
     FlexLayoutModule,
     SharedModule.forRoot()
   ],

@@ -10,7 +10,8 @@
       "assets": [
         "assets",
         "favicon.ico",
-        "manifest.json"
+        "manifest.json",
+        { "glob": "*.css", "input": "./styles/", "output": "./themes/" }
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -20,7 +21,6 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "gv",
       "styles": [
-        "styles.scss"
       ],
       "scripts": [
         "../node_modules/hammerjs/hammer.min.js"

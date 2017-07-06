@@ -1,5 +1,17 @@
+<link rel="stylesheet" type="text/css" [href]="themeCSSFile">
+
 <!--The whole content below can be removed with the new code.-->
-<div fxLayout="column">
+<div fxLayout="column" [ngClass]="themeClass">
+  <md-toolbar color="primary">
+    <form>
+      <md-select placeholder="Theme" [(ngModel)]="selectedTheme" name="theme">
+        <md-option *ngFor="let theme of themes" [value]="theme.value">
+          {{theme.viewValue}}
+        </md-option>
+      </md-select>
+    </form>
+  </md-toolbar>
+
   <div class="header" fxLayout="row" fxLayoutAlign="space-between center">
     <h1>
       Welcome to {{title}} <i class="fa fa-check"></i>!!
@@ -28,13 +40,13 @@
         Angular Material works!
         <md-icon fontSet="fa" fontIcon="fa-check"></md-icon>
       </button>
+      <p>Navigation:
+        <a [routerLink]="['/']" preserveQueryParams>Home</a>
+        <a [routerLink]="['lazy/counter']" preserveQueryParams>Lazy Page</a>
+      </p>
+      <router-outlet></router-outlet>
     </div>
   </div>
-  <p>Navigation:
-    <a [routerLink]="['/']">Home</a>
-    <a [routerLink]="['lazy/counter']">Lazy Page</a>
-  </p>
-  <router-outlet></router-outlet>
   <div class="footer" fxLayout="row" fxLayoutAlign="space-between center">
     <div></div>
     <div>{{version.toString()}}</div>
