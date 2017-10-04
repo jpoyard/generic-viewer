@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from 'angularfire2';
-import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MdIcon, MdIconModule, MdIconRegistry } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,14 +19,15 @@ import { SharedModule } from './shared/shared.module';
     HomeComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
+    MdIconModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    MaterialModule,
     FlexLayoutModule,
     SharedModule.forRoot()
   ],
-  providers: [],
+  providers: [MdIconRegistry],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
