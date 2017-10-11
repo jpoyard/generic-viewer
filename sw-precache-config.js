@@ -10,6 +10,7 @@ module.exports = {
     root: 'dist',
     stripPrefix: 'dist/',
     navigateFallback: '/index.html',
+    navigateFallbackWhitelist: [/^(?!\/__).*/],
     runtimeCaching: [{
         urlPattern: /node-hnapi\.herokuapp\.com/,
         handler: 'networkFirst'

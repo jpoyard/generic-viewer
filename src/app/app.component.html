@@ -2,7 +2,8 @@
 <div fxLayout="column">
   <div class="header" fxLayout="row" fxLayoutAlign="space-between center">
     <h1>
-      Welcome to {{title}} <i class="fa fa-check"></i>!!
+      Welcome to {{title}}
+      <i class="fa fa-check"></i>!!
     </h1>
   </div>
 
@@ -15,13 +16,19 @@
       <h2>Here are some links to help you start: </h2>
       <ul>
         <li>
-          <h2><a target="_blank" rel="noopener" href="https://angular.io/docs/ts/latest/tutorial/">Tour of Heroes</a></h2>
+          <h2>
+            <a target="_blank" rel="noopener" href="https://angular.io/docs/ts/latest/tutorial/">Tour of Heroes</a>
+          </h2>
         </li>
         <li>
-          <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
+          <h2>
+            <a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a>
+          </h2>
         </li>
         <li>
-          <h2><a target="_blank" rel="noopener" href="http://angularjs.blogspot.ca/">Angular blog</a></h2>
+          <h2>
+            <a target="_blank" rel="noopener" href="http://angularjs.blogspot.ca/">Angular blog</a>
+          </h2>
         </li>
       </ul>
       <button md-raised-button>
@@ -30,10 +37,17 @@
       </button>
     </div>
   </div>
-  <p>Navigation:
-    <a [routerLink]="['/']">Home</a>
-    <a [routerLink]="['lazy/counter']">Lazy Page</a>
-  </p>
+  <div *ngIf="authService.afAuth.authState | async; let user; else showLogin">
+    <p>Navigation:
+      <a [routerLink]="['/']">Home</a>
+      <a [routerLink]="['lazy/counter']">Lazy Page</a>
+      <a [routerLink]="['login']" (click)="authService.signOut()">Logout</a>
+    </p>
+  </div>
+  <ng-template #showLogin>
+    <p>Please login.</p>
+    <button (click)="authService.signIn()">Login with Google</button>
+  </ng-template>
   <router-outlet></router-outlet>
   <div class="footer" fxLayout="row" fxLayoutAlign="space-between center">
     <div></div>

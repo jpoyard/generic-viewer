@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { appVersion, Version } from './version';
+import { AuthService } from 'app/shared/auth.service';
 
 @Component({
   selector: 'gv-root',
@@ -9,7 +10,9 @@ import { appVersion, Version } from './version';
 export class AppComponent {
   public version: Version;
   title = 'Generic viewer';
-  constructor() {
+  constructor(
+    public authService: AuthService
+  ) {
     this.version = appVersion;
   }
 }
