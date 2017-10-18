@@ -10,7 +10,7 @@ class AuthServiceSpy {
   signOut() { }
 }
 
-describe('AppComponent', () => {
+xdescribe('AppComponent', () => {
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
   let authService: AuthService;
