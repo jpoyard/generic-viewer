@@ -37,7 +37,7 @@
       </button>
     </div>
   </div>
-  <div *ngIf="authService.afAuth.authState | async; let user; else showLogin">
+  <div *ngIf="authService.authState | async; let user; else showLogin">
     <p>Navigation:
       <a [routerLink]="['/']">Home</a>
       <a [routerLink]="['lazy/counter']">Lazy Page</a>
